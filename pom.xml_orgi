@@ -37,6 +37,7 @@
       </dependency>
     </dependencies>
   </dependencyManagement>
+
   <build>
     <pluginManagement>
       <plugins>
@@ -48,24 +49,4 @@
       </plugins>
     </pluginManagement>
   </build>
-  <profiles>
-    <profile>
-      <id>dev</id>
-      <activation>
-        <activeByDefault>true</activeByDefault>
-      </activation>
-      <properties>
-        <app.env>dev</app.env>
-        <app.data.path>tasks.json</app.data.path>
-      </properties>
-    </profile>
-    <profile>
-      <id>prod</id>
-      <properties>
-        <app.env>prod</app.env>
-        <app.data.path>/var/data/tasks.json</app.data.path>
-      </properties>
-    </profile>
-  </profiles>
-</project>  <!-- profiles MUST be before this -->
-
+</project>
